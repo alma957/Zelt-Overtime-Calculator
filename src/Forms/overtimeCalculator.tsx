@@ -37,7 +37,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
  export const OvertimeCalculator = ():JSX.Element=>{
 
   const [inputState,setInputState] = useState<InputState>({
-   regHours:20,
+   regHours:40,
 
    regPay:5000,
    regPayFreq:"monthly",
