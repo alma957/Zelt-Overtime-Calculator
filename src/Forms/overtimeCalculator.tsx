@@ -61,7 +61,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
       }}
     >
   
-      <Typography sx={{marginLeft:"45%",size:"large"}}>
+      <Typography sx={{marginLeft:"35%",size:"large"}}>
        <b> Regular Pay Input </b>
       </Typography>
      
@@ -139,7 +139,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
       />      </Box>
           
       </Box>
-      <Typography sx={{marginLeft:"45%",size:"large",marginTop:"20px"}}>
+      <Typography sx={{marginLeft:"35%",size:"large",marginTop:"20px"}}>
        <b> Overtime Pay Input </b>
       </Typography>
       <Box style={{...inputSameRow,marginTop:"20px"}}>
