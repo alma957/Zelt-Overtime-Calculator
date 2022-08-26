@@ -8,7 +8,7 @@ const marginLeft={marginLeft:"5px"}
 export const Output = ({props}:any):JSX.Element=>{
    
     const data = props as InputState
-
+    const total = data.regPay*payPeriodMapping[data.regPayFreq as keyof typeof payPeriodMapping]/(data.regHours*(data.regHoursFreq==="weekly"?1:data.daysWorkedPerWeek))*data.mult*data.extrHoursWorked
 
     return (
         <Box>
@@ -17,7 +17,7 @@ export const Output = ({props}:any):JSX.Element=>{
       
         <Typography style={marginLeft} >
 
-        <b>Overtime payment amount: </b>£{currencyFormat(roundUpAll(data.regPay*payPeriodMapping[data.regPayFreq as keyof typeof payPeriodMapping]/data.regHours*data.mult*data.extrHoursWorked))}
+        <b>Overtime payment amount: </b>{isNaN(total)?"": "£"+currencyFormat(roundUpAll(total))}
        </Typography>
        </Box>
        </Box>

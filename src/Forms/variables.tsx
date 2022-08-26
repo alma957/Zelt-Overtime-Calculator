@@ -3,9 +3,10 @@ export interface InputState {
    regPay:number;   
    regPayFreq:string;
    regHours:number;
-  
+   regHoursFreq:string;
    mult:number;
-   extrHoursWorked:number
+   extrHoursWorked:number;
+   daysWorkedPerWeek:number;
 
   }
  export interface OutputState {

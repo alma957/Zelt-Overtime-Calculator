@@ -38,11 +38,12 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
 
   const [inputState,setInputState] = useState<InputState>({
    regHours:40,
-
+    regHoursFreq:"weekly",
    regPay:5000,
    regPayFreq:"monthly",
    extrHoursWorked:10,
-   mult:1.5
+   mult:1.5,
+   daysWorkedPerWeek:5
   });
 
 
@@ -110,16 +111,16 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         style={{...inputStyle,width:"100%"}}
         inputProps={{min:0}}
         
-        // InputProps={{
-        //   endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"35%"}} onChange={(e)=>{
-        //     inputState.regHoursFreq = e.target.value
-        //     setInputState({...inputState})
-        //   }}>
-        //   <MenuItem value="weekly">Weekly</MenuItem>
-        //   <MenuItem value="daily">Daily</MenuItem></Select>,
-        // }}
+        InputProps={{
+          endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"35%"}} onChange={(e)=>{
+            inputState.regHoursFreq = e.target.value
+            setInputState({...inputState})
+          }}>
+          <MenuItem value="weekly">Weekly</MenuItem>
+          <MenuItem value="daily">Daily</MenuItem></Select>,
+        }}
      
-        label="Regular working hours per week"
+        label="Regular working hours"
         value={inputState?.regHours}
         InputLabelProps={{
           shrink: true,
@@ -135,6 +136,30 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         FormHelperTextProps={{
          // style: errorStyle,
         }}
+
+      />      </Box>
+      <Box style={{width:"100%",marginLeft:"20px"}}>
+        <TextField
+        size="small"
+        type="number"
+        style={{...inputStyle,width:"100%"}}
+       
+        
+     
+        label="Days worked per week"
+        value={inputState?.daysWorkedPerWeek}
+        InputProps={{ inputProps: { min: 0, max: 7 } }}
+        disabled={inputState.regHoursFreq==="weekly"?true:false}
+        InputLabelProps={{
+          shrink: true,
+          style: inputState.regHoursFreq==="weekly"?{}: labelStyle,
+        }}
+      //  value={inputState.date}
+        onChange={e => {
+          inputState!.daysWorkedPerWeek=parseFloat(e.target.value)
+          setInputState({...inputState})
+        }}
+      
 
       />      </Box>
           
