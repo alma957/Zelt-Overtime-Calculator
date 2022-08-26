@@ -78,13 +78,17 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         label="Earnings"
         value={inputState?.regPay}
         InputProps={{
-          endAdornment:<Select style={{marginRight:"-14px",width:"35%"}}  value={inputState.regPayFreq} defaultValue="monthly" onChange={(e)=>{
+          endAdornment:
+          
+          <Select style={{marginRight:"-14px",width:"35%"}} 
+          
+           value={inputState.regPayFreq} defaultValue="monthly" onChange={(e)=>{
             inputState.regPayFreq = e.target.value
             setInputState({...inputState})
           }}>
-          <MenuItem value="annually">Annually</MenuItem>
-          <MenuItem value="monthly">Monthly</MenuItem>
-          <MenuItem value="weekly">Weekly</MenuItem>
+          <MenuItem value="annually">Per year</MenuItem>
+          <MenuItem value="monthly">Per month</MenuItem>
+          <MenuItem value="weekly">Per week</MenuItem>
           </Select>,
         }}
         InputLabelProps={{
@@ -116,8 +120,8 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
             inputState.regHoursFreq = e.target.value
             setInputState({...inputState})
           }}>
-          <MenuItem value="weekly">Weekly</MenuItem>
-          <MenuItem value="daily">Daily</MenuItem></Select>,
+          <MenuItem value="weekly">Per week</MenuItem>
+          <MenuItem value="daily">Per day</MenuItem></Select>,
         }}
      
         label="Regular working hours"
