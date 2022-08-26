@@ -89,6 +89,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
           <MenuItem value="annually">Per year</MenuItem>
           <MenuItem value="monthly">Per month</MenuItem>
           <MenuItem value="weekly">Per week</MenuItem>
+          <MenuItem value="daily">Per day</MenuItem>
           </Select>,
         }}
         InputLabelProps={{
@@ -153,10 +154,10 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         label="Days worked per week"
         value={inputState?.daysWorkedPerWeek}
         InputProps={{ inputProps: { min: 0, max: 7 } }}
-        disabled={inputState.regHoursFreq==="weekly"?true:false}
+        disabled={inputState.regHoursFreq==="daily"||inputState.regPayFreq==="daily"?false:true}
         InputLabelProps={{
           shrink: true,
-          style: inputState.regHoursFreq==="weekly"?{}: labelStyle,
+          style: inputState.regHoursFreq==="daily"||inputState.regPayFreq==="daily"? labelStyle:{},
         }}
       //  value={inputState.date}
         onChange={e => {

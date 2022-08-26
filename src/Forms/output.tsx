@@ -8,8 +8,10 @@ const marginLeft={marginLeft:"5px"}
 export const Output = ({props}:any):JSX.Element=>{
    
     const data = props as InputState
-    const total = data.regPay*payPeriodMapping[data.regPayFreq as keyof typeof payPeriodMapping]/(data.regHours*(data.regHoursFreq==="weekly"?1:data.daysWorkedPerWeek))*data.mult*data.extrHoursWorked
-
+    const weeklyEarnings = data.regPay * (data.regPayFreq==="daily"?data.daysWorkedPerWeek:payPeriodMapping[data.regPayFreq as keyof typeof payPeriodMapping])
+    const weeklyHours = data.regHours * (data.regHoursFreq==="daily"?data.daysWorkedPerWeek:1)
+    const hourlyWage = weeklyEarnings/weeklyHours
+    const total = data.extrHoursWorked*data.mult*hourlyWage
     return (
         <Box>
 
