@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Zelt-Overtime-Calculator/static/css/main.5e1062de.css",
-    "main.js": "/Zelt-Overtime-Calculator/static/js/main.afaf2567.js",
+    "main.js": "/Zelt-Overtime-Calculator/static/js/main.f631facf.js",
     "static/js/787.9fc92dcb.chunk.js": "/Zelt-Overtime-Calculator/static/js/787.9fc92dcb.chunk.js",
     "index.html": "/Zelt-Overtime-Calculator/index.html",
     "main.5e1062de.css.map": "/Zelt-Overtime-Calculator/static/css/main.5e1062de.css.map",
-    "main.afaf2567.js.map": "/Zelt-Overtime-Calculator/static/js/main.afaf2567.js.map",
+    "main.f631facf.js.map": "/Zelt-Overtime-Calculator/static/js/main.f631facf.js.map",
     "787.9fc92dcb.chunk.js.map": "/Zelt-Overtime-Calculator/static/js/787.9fc92dcb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e1062de.css",
-    "static/js/main.afaf2567.js"
+    "static/js/main.f631facf.js"
   ]
 }
