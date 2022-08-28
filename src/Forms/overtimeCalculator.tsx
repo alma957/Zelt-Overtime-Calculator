@@ -80,7 +80,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         InputProps={{
           endAdornment:
           
-          <Select style={{marginRight:"-14px",width:"35%"}} 
+          <Select style={{marginRight:"-14px",width:"45%"}} 
           
            value={inputState.regPayFreq} defaultValue="monthly" onChange={(e)=>{
             inputState.regPayFreq = e.target.value
@@ -117,7 +117,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         inputProps={{min:0}}
         
         InputProps={{
-          endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"35%"}} onChange={(e)=>{
+          endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"45%"}} onChange={(e)=>{
             inputState.regHoursFreq = e.target.value
             setInputState({...inputState})
           }}>
