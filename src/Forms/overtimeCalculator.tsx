@@ -86,10 +86,10 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
             inputState.regPayFreq = e.target.value
             setInputState({...inputState})
           }}>
-          <MenuItem value="annually">Per year</MenuItem>
-          <MenuItem value="monthly">Per month</MenuItem>
-          <MenuItem value="weekly">Per week</MenuItem>
-          <MenuItem value="daily">Per day</MenuItem>
+          <MenuItem value="annually">Annually</MenuItem>
+          <MenuItem value="monthly">Monthly</MenuItem>
+          <MenuItem value="weekly">Weekly</MenuItem>
+          <MenuItem value="daily">Daily</MenuItem>
           </Select>,
         }}
         InputLabelProps={{
@@ -121,8 +121,8 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
             inputState.regHoursFreq = e.target.value
             setInputState({...inputState})
           }}>
-          <MenuItem value="weekly">Per week</MenuItem>
-          <MenuItem value="daily">Per day</MenuItem></Select>,
+          <MenuItem value="weekly">Weekly</MenuItem>
+          <MenuItem value="daily">Daily</MenuItem></Select>,
         }}
      
         label="Regular working hours"
