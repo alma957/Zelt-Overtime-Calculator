@@ -80,7 +80,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         InputProps={{
           endAdornment:
           
-          <Select style={{marginRight:"-14px",width:"45%"}} 
+          <Select style={{marginRight:"-14px",width:"50%"}} 
           
            value={inputState.regPayFreq} defaultValue="monthly" onChange={(e)=>{
             inputState.regPayFreq = e.target.value
@@ -117,7 +117,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         inputProps={{min:0}}
         
         InputProps={{
-          endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"45%"}} onChange={(e)=>{
+          endAdornment:<Select value={inputState.regHoursFreq} style={{marginRight:"-14px",width:"50%"}} onChange={(e)=>{
             inputState.regHoursFreq = e.target.value
             setInputState({...inputState})
           }}>
@@ -125,7 +125,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
           <MenuItem value="daily">Daily</MenuItem></Select>,
         }}
      
-        label="Regular working hours"
+        label="Working hours"
         value={inputState?.regHours}
         InputLabelProps={{
           shrink: true,
@@ -205,7 +205,7 @@ const inputSameRow = {display:"flex",FlexDirection:"row",justifyContent:"flex-st
         type="number"
         style={{...inputStyle,width:"100%"}}
         inputProps={{min:0}}
-        label="Hours worked"
+        label="Overtime hours worked"
         value={inputState?.extrHoursWorked}
         InputLabelProps={{
           shrink: true,
